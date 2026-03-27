@@ -1,12 +1,13 @@
 import { motion } from 'framer-motion';
-import { Mail, Github, Linkedin, Copy, ArrowUpRight, MoveRight } from 'lucide-react';
+import { Mail, Github, Linkedin, ArrowUpRight } from 'lucide-react';
 import { profile } from '../data/profile';
+import { FaTelegram } from 'react-icons/fa';
 
 const Contact = () => {
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    alert('Copied to clipboard!');
-  };
+  // const copyToClipboard = (text: string) => {
+  //   navigator.clipboard.writeText(text);
+  //   alert('Copied to clipboard!');
+  // };
 
   return (
     <section id="contact" className="py-24">
@@ -29,7 +30,12 @@ const Contact = () => {
           {/* Contact Cards */}
           <div className="flex flex-col gap-4">
             {/* Email Card */}
-            <div className="group flex items-center gap-6 bg-white border border-slate-100 p-5 rounded-[24px] hover:border-primary transition-all shadow-sm">
+            <a 
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center gap-6 bg-white border border-slate-100 p-5 rounded-[24px] hover:border-primary transition-all shadow-sm no-underline"
+            >
               <div className="w-12 h-12 bg-primary/5 text-primary rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
                 <Mail size={18} />
               </div>
@@ -37,13 +43,10 @@ const Contact = () => {
                 <span className="block text-[10px] font-bold text-slate-400 tracking-widest uppercase mb-1">EMAIL</span>
                 <p className="text-sm font-bold text-dark truncate">{profile.email}</p>
               </div>
-              <button 
-                onClick={() => copyToClipboard(profile.email)}
-                className="w-10 h-10 flex items-center justify-center rounded-xl text-slate-300 hover:bg-slate-50 hover:text-primary transition-all"
-              >
-                <Copy size={16} />
-              </button>
-            </div>
+              <div className="w-10 h-10 flex items-center justify-center rounded-xl text-slate-200 group-hover:text-primary transition-all group-hover:translate-x-1 group-hover:-translate-y-1">
+                <ArrowUpRight size={18} />
+              </div>
+            </a>
 
             {/* GitHub Card */}
             <a 
@@ -99,12 +102,14 @@ const Contact = () => {
               <h3 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tighter leading-tight">Get in touch</h3>
             </div>
             <div className="flex items-center justify-between mt-auto">
-              <span className="text-sm md:text-base font-medium opacity-90">{profile.email}</span>
+              <span className="text-4xl md:text-3xl font-medium opacity-90">{profile.telegramName}</span>
               <a 
-                href={`mailto:${profile.email}`}
+                href={profile.telegramUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="w-14 h-14 bg-white/10 hover:bg-white hover:text-primary rounded-full flex items-center justify-center transition-all group"
               >
-                <MoveRight size={20} className="group-hover:translate-x-1 transition-transform" />
+                <FaTelegram size={30} />
               </a>
             </div>
           </div>

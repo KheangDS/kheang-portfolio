@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { User, MapPin, MoveRight, Camera } from 'lucide-react';
+import { User, MapPin, MoveRight } from 'lucide-react';
 import { profile } from '../data/profile';
 import { Link } from 'react-scroll';
 
@@ -17,7 +17,7 @@ const About = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-lg md:text-xl text-slate-500 leading-relaxed mb-10 max-w-2xl font-normal">
+          <p className="text-justify text-lg md:text-xl text-slate-500 leading-relaxed mb-10 max-w-2xl font-normal">
             {profile.shortBio}
           </p>
 
@@ -67,16 +67,16 @@ const About = () => {
         >
           <div className="aspect-[4/5] bg-slate-50 border-2 border-dashed border-slate-200 rounded-[32px] flex flex-col items-center justify-center gap-6 p-8 group relative overflow-hidden">
              {profile.profilePhoto ? (
-               <img 
-                 src={profile.profilePhoto} 
-                 alt={profile.name} 
-                 className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-10 transition-opacity"
-               />
+              <img 
+                src={profile.profilePhoto} 
+                alt={profile.name} 
+                className="absolute inset-0 w-full h-full object-cover opacity-100 group-hover:opacity-100 group-hover:scale-105 transition-all"
+              />
              ) : null}
              
-             <div className="w-16 h-16 bg-slate-200/50 rounded-2xl flex items-center justify-center text-slate-400 group-hover:scale-110 transition-transform">
+             {/* <div className="w-16 h-16 bg-slate-200/50 rounded-2xl flex items-center justify-center text-slate-400 group-hover:scale-110 transition-transform">
                <Camera size={28} />
-             </div>
+             </div> */}
              
              <div className="text-center space-y-2">
                <p className="text-[10px] font-bold text-slate-400 tracking-[0.2em] uppercase">Photo Placeholder</p>

@@ -5,7 +5,7 @@ import { profile } from '../data/profile';
 
 const Hero = () => {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center pt-20 md:pt-0">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-20 md:pt-40">
       <div className="max-w-6xl mx-auto px-6 w-full">
         {/* Status Pill */}
         <motion.div 
@@ -15,7 +15,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
         >
           <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse"></span>
-          STATUS: READY TO ANALYZE
+          STATUS: {profile.status}
         </motion.div>
 
         {/* Name */}
@@ -28,7 +28,7 @@ const Hero = () => {
           <h1 className="text-7xl md:text-[120px] font-extrabold leading-[0.9] text-dark tracking-tighter">
             YENG
           </h1>
-          <h1 className="text-7xl md:text-[120px] font-extrabold leading-[0.9] text-gradient tracking-tighter">
+          <h1 className="text-7xl pb-5 md:text-[120px] font-extrabold leading-[0.9] text-gradient tracking-tighter">
             Kheang
           </h1>
         </motion.div>
@@ -40,12 +40,12 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="bg-[#f1f5f9] text-dark px-4 py-2 rounded-xl font-bold text-sm tracking-tight shadow-sm border border-slate-200/50">
-            Data Analyst
+          <div className="bg-[#f1f5f9] text-dark px-4 py-2 rounded-xl font-bold text-sm tracking-tight shadow-sm border border-slate-200/50 w-fit">
+            {profile.title}
           </div>
           <div className="hidden md:block w-8 h-[1px] bg-slate-300"></div>
-          <p className="text-lg md:text-xl text-text-muted font-normal max-w-2xl leading-relaxed">
-            Specializing in turning complex variables into strategic clarity.
+          <p className="text-justify text-lg md:text-xl text-text-muted font-normal max-w-2xl leading-relaxed">
+            I turn raw data into meaningful insights and intelligent systems—combining analytics, machine learning, and backend development to solve real-world problems.
           </p>
         </motion.div>
 
@@ -57,7 +57,9 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <a 
-            href={`mailto:${profile.email}`} 
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${profile.email}`}
+            target="_blank"
+            rel="noreferrer"
             className="w-12 h-12 flex items-center justify-center bg-white border border-slate-200 rounded-xl text-slate-500 hover:border-primary hover:text-primary transition-all shadow-sm"
           >
             <Mail size={18} />

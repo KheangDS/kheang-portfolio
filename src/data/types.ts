@@ -6,6 +6,9 @@ export interface Profile {
   github: string;
   linkedin: string;
   profilePhoto?: string;
+  telegramName?: string;
+  telegramUrl?: string,
+  status?: string;
 }
 
 export interface Skill {

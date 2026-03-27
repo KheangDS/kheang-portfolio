@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import { BarChart, Eye, Code2, PieChart } from 'lucide-react';
+import { highlights } from '../data/highlights';
 
 const Highlights = () => {
   const focuses = [
     {
       title: "Data Analysis & Predictive Modeling",
-      desc: "Building models that transform raw data into actionable insights using Python, SQL, and machine learning techniques.",
+      desc: highlights[0].description,
       icon: <BarChart size={24} />,
       bgColor: 'bg-[#5d59ef]/5',
       borderColor: 'border-[#5d59ef]/10',
@@ -14,7 +15,7 @@ const Highlights = () => {
     },
     {
       title: "Computer Vision",
-      desc: "Exploring visual data processing with YOLO, OpenCV, and PyTorch to create real-time detection systems.",
+      desc: highlights[1].description,
       icon: <Eye size={24} />,
       bgColor: 'bg-[#6366f1]/5',
       borderColor: 'border-[#6366f1]/10',
@@ -23,7 +24,7 @@ const Highlights = () => {
     },
     {
       title: "Backend Development",
-      desc: "Designing and building scalable RESTful APIs with FastAPI to support data-driven applications.",
+      desc: highlights[2].description,
       icon: <Code2 size={24} />,
       bgColor: 'bg-[#22d3ee]/5',
       borderColor: 'border-[#22d3ee]/10',
@@ -32,7 +33,7 @@ const Highlights = () => {
     },
     {
       title: "Data Visualization",
-      desc: "Creating compelling dashboards and visual stories with Power BI, Excel, and Python libraries.",
+      desc: highlights[3].description,
       icon: <PieChart size={24} />,
       bgColor: 'bg-[#fbbf24]/5',
       borderColor: 'border-[#fbbf24]/10',

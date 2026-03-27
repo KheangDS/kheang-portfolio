@@ -61,7 +61,7 @@ const Navbar = () => {
             duration={500} 
             className="btn btn-primary h-11 px-7 text-sm"
           >
-            Hire Me
+            Contact Me
           </Link>
         </div>
 

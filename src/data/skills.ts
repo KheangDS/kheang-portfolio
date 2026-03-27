@@ -8,12 +8,12 @@ export const skills: SkillCategory[] = [
   },
   {
     category: "Frameworks",
-    skills: ["RESTful API", "FastAPI"],
+    skills: ["PyTorch", "FastAPI"],
     color: "bg-skill-cyan"
   },
   {
-    category: "Data & ML",
-    skills: ["Pandas", "NumPy", "Scikit-learn", "PyTorch"],
+    category: "Data",
+    skills: ["Pandas", "NumPy", "Scikit-learn"],
     color: "bg-skill-pink"
   },
   {

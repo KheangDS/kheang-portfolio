@@ -3,22 +3,22 @@ import type { Highlight } from './types';
 export const highlights: Highlight[] = [
   {
     title: "Data Analysis & Predictive Modeling",
-    description: "Building models that transform raw data into actionable insights using Python, SQL, and machine learning techniques.",
+    description: "Turning raw data into predictive insights that support smarter decisions using Python, SQL, and machine learning.",
     year: "Focus Area"
   },
   {
     title: "Computer Vision",
-    description: "Exploring visual data processing with YOLO, OpenCV, and PyTorch to create real-time detection systems.",
+    description: "Building real-time computer vision systems using YOLO, OpenCV, and PyTorch to detect and interpret visual data.",
     year: "Focus Area"
   },
   {
     title: "Backend Development",
-    description: "Designing and building scalable RESTful APIs with FastAPI to support data-driven applications.",
+    description: "Developing fast and scalable RESTful APIs with FastAPI to power data-driven and AI-based applications.",
     year: "Focus Area"
   },
   {
     title: "Data Visualization",
-    description: "Creating compelling dashboards and visual stories with Power BI, Excel, and Python libraries.",
+    description: "Transforming complex data into clear and engaging visual stories using Power BI, Excel, and Python.",
     year: "Focus Area"
   }
 ];

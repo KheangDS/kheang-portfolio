@@ -6,7 +6,6 @@ import Projects from './components/Projects';
 import Highlights from './components/Highlights';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import './styles/index.css';
 
 function App() {
   return (

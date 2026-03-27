@@ -6,7 +6,7 @@ import { projects } from '../data/projects';
 const Projects = () => {
   const [filter, setFilter] = useState('All');
   
-  const categories = ['All', 'Computer Vision', 'Data Analysis', 'Software Engineering'];
+  const categories = ['All', 'Computer Vision', 'Data Analysis', 'LLM', 'ML/DL','Backend Development'];
   
   const filteredProjects = filter === 'All' 
     ? projects 
@@ -22,6 +22,12 @@ const Projects = () => {
     if (subtitle === 'Computer Vision') return 'text-purple-500';
     if (subtitle === 'Data Analysis') return 'text-blue-500';
     return 'text-cyan-500';
+  };
+
+  const handleProjectClick = (link: string | undefined) => {
+    if (link) {
+      window.open(link, '_blank');
+    }
   };
 
   return (
@@ -49,18 +55,18 @@ const Projects = () => {
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <AnimatePresence mode='popLayout'>
-          {filteredProjects.map((project, idx) => (
+          {filteredProjects.map((project) => (
             <motion.div
-              layout
               key={project.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              transition={{ duration: 0.4, delay: idx * 0.05 }}
-              className="bg-white border border-slate-100 rounded-[32px] overflow-hidden hover:shadow-xl transition-all flex flex-col group shadow-sm"
+              onClick={() => handleProjectClick(project.github)}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="bg-white border border-slate-100 rounded-[32px] overflow-hidden hover:shadow-xl transition-all flex flex-col group shadow-sm cursor-pointer"
             >
               {/* Image Box */}
-              <div className="relative w-full aspect-[4/3] bg-slate-50 overflow-hidden">
+              <div className="relative w-full aspect-[5/3] bg-slate-50 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title} 
@@ -81,11 +87,11 @@ const Projects = () => {
               </div>
 
               {/* Content */}
-              <div className="p-8 flex flex-col flex-1">
+              <div className="p-4 flex flex-col flex-1">
                 <h3 className="text-xl font-bold text-dark mb-3 tracking-tight group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-sm text-slate-500 leading-relaxed mb-6 flex-1 line-clamp-3">
+                <p className="text-sm text-slate-500 leading-tight mb-6 flex-1 line-clamp-2">
                   {project.description}
                 </p>
 
