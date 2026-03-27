@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg-main text-text-main font-main antialiased bg-dot-grid;
+    background-size: 32px 32px;
+  }
+}
+
+@layer components {
+  section {
+    @apply py-20 px-6 max-w-[1200px] mx-auto;
+  }
+
+  .section-label {
+    @apply flex items-center gap-4 text-xs font-bold uppercase tracking-[0.2em] text-primary mb-8;
+  }
+
+  .section-label::before {
+    content: attr(data-index);
+    @apply text-text-dim opacity-60;
+  }
+
+  .section-label::after {
+    content: "";
+    @apply h-[1px] w-12 bg-primary opacity-30;
+  }
+
+  .section-title {
+    @apply text-5xl md:text-6xl font-extrabold tracking-tight mb-12 leading-[1.1];
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-8 h-[56px] text-base font-bold rounded-pill transition-all duration-300 cursor-pointer gap-3;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white border-none shadow-btn hover:-translate-y-1 hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply bg-white text-text-main border border-border-light hover:border-text-main hover:bg-bg-main;
+  }
+
+  .card {
+    @apply bg-bg-card rounded-card border border-border-light transition-all duration-300;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-hero-gradient;
+  }
+}
