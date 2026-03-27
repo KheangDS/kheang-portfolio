@@ -9,7 +9,7 @@ export const profile: Profile = {
   email: "kheangyeng61@gmail.com",
   github: "https://github.com/KheangDS",
   linkedin: "https://www.linkedin.com/in/yengkheang/",
-  profilePhoto: "/images/profile-photo.jpg", 
+  profilePhoto: "/images/me1.jpg", 
   telegramName: "Yeng Kheang",
   telegramUrl: "https://t.me/YengKheang",
 };
