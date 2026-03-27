@@ -5,9 +5,9 @@ export const projects: Project[] = [
     title: "Sign Language Detection",
     subtitle: "Computer Vision",
     description: "A computer vision project that detects sign language gestures using YOLO in real-time.",
-    tech: ["Python", "YOLO", "OpenCV", "PyTorch"],
+    tech: ["Python", "YOLO", "OpenCV"],
     image: "/images/yolo.jpg",
-    github: "https://github.com/KheangDS"
+    github: "https://github.com/KheangDS/Sign-Language-Detection"
   },
   {
     title: "Weather Prediction — Phnom Penh",
@@ -20,10 +20,10 @@ export const projects: Project[] = [
   {
     title: "FastAPI Backend",
     subtitle: "Backend Development",
-    description: "Building scalable and high-performance RESTful APIs for data processing pipelines.",
+    description: "Building scalable and high-performance RESTful APIs for ReDA Lab of AMS Department.",
     tech: ["FastAPI", "Python", "REST API", "Git"],
     image: "/images/ReDA.jpg",
-    github: "https://github.com/KheangDS"
+    github: "https://github.com/ReDa-Lab-Dev-Team/reda-lab-backend/tree/kheang"
   },
   {
     title: "HevNas App",
